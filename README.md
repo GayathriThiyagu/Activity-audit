@@ -60,7 +60,7 @@ The CreateBucket event indicates that an Amazon S3 bucket creation operation occ
 | Event Name | CreateBucket |
 | Event Source | s3.amazonaws.com |
 | AWS Region | ap-south-1 |
-| Read-only | fase |
+| Read-only | false |
 | Error Code | - |
 | Activity | S3 bucket creation |
 
@@ -147,50 +147,58 @@ Compare the two CloudTrail events.
 <table>
   <tr>
     <th>Parameter</th>
-    <th>Observation</th>
+    <th>Event 1</th>
+    <th>Event 2</th>
   </tr>
 
   <tr>
-    <td>Event Time</td>
-    <td>August 05, 2026, 10:58:59<br>August 05, 2026, 11:01:28</td>
+    <td><strong>Event Time</strong></td>
+    <td>August 05, 2026, 10:58:59</td>
+    <td>August 05, 2026, 11:01:28</td>
   </tr>
 
   <tr>
-    <td>User Name</td>
-    <td>root<br>-</td>
+    <td><strong>User Name</strong></td>
+    <td>root</td>
+    <td>-</td>
   </tr>
 
   <tr>
-    <td>Event Name</td>
-    <td>CreateBucket<br>AutomatedDefaultVpcCreation</td>
+    <td><strong>Event Name</strong></td>
+    <td>CreateBucket</td>
+    <td>AutomatedDefaultVpcCreation</td>
   </tr>
 
   <tr>
-    <td>Event Source</td>
-    <td>s3.amazonaws.com<br>ec2.amazonaws.com</td>
+    <td><strong>Event Source</strong></td>
+    <td>s3.amazonaws.com</td>
+    <td>ec2.amazonaws.com</td>
   </tr>
 
   <tr>
-    <td>AWS Region</td>
-    <td>ap-south-1<br>ap-south-1</td>
+    <td><strong>AWS Region</strong></td>
+    <td>ap-south-1</td>
+    <td>ap-south-1</td>
   </tr>
 
   <tr>
-    <td>Read-only</td>
-    <td>false<br>false</td>
+    <td><strong>Read-only</strong></td>
+    <td>false</td>
+    <td>false</td>
   </tr>
 
   <tr>
-    <td>Error Code</td>
-    <td>-<br>-</td>
+    <td><strong>Error Code</strong></td>
+    <td>-</td>
+    <td>-</td>
   </tr>
 
   <tr>
-    <td>Activity</td>
-    <td>S3 bucket creation<br>Automated VPC creation</td>
+    <td><strong>Activity</strong></td>
+    <td>S3 bucket creation</td>
+    <td>Automated VPC creation</td>
   </tr>
 
 </table>
 
 </div>
-
