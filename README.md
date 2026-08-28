@@ -202,3 +202,45 @@ Compare the two CloudTrail events.
 </table>
 
 </div>
+
+# PART E — SECURITY AUDIT ANALYSIS
+
+## Step 8: Identify Who, What, When and Where
+
+For each event, identify the following details:
+
+## Event 1 — CreateBucket
+
+| Question | Answer |
+|:---:|:---|
+| WHO? | `root` |
+| WHAT? | `CreateBucket` — S3 bucket creation |
+| WHEN? | August 05, 2026, 10:58:59 |
+| WHERE? | `ap-south-1` |
+| RESULT? | Successful — No error code |
+
+## Event 2 — AutomatedDefaultVpcCreation
+
+| Question | Answer |
+|:---:|:---|
+| WHO? | `-` (AWS automated service activity) |
+| WHAT? | `AutomatedDefaultVpcCreation` — Automated VPC creation |
+| WHEN? | August 05, 2026, 11:01:28 |
+| WHERE? | `ap-south-1` |
+| RESULT? | Successful — No error code |
+
+## Step 9: Prepare the Final Audit Table
+
+| Parameter | Event 1 | Event 2 |
+|:---:|:---:|:---:|
+| Event Time | August 05, 2026, 10:58:59 | August 05, 2026, 11:01:28 |
+| User | root | - |
+| Event Name | CreateBucket | AutomatedDefaultVpcCreation |
+| Service | Amazon S3 | Amazon EC2 |
+| Region | ap-south-1 | ap-south-1 |
+| Read-only | false | false |
+| Result | Successful | Successful |
+| Activity | S3 bucket creation | Automated VPC creation |
+
+## RESULT:
+The cloud activities in AWS were successfully audited using AWS CloudTrail Event History. Different AWS events were examined based on event time, user identity, event name, event source, AWS Region, read-only status, and error status. The experiment demonstrated how AWS CloudTrail provides an audit trail for monitoring, accountability, and investigation of cloud activities.
